@@ -1,10 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
+    <ion-avatar slot="end">
+      <img src="/assets/logo.jpeg" alt="">
+    </ion-avatar>
+    <ion-title text="start">Home</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -13,9 +15,21 @@
     </ion-toolbar>
   </ion-header>
 
-              <h2>Ponganos 10 profe</h2>
+  <div class="centrar">
+              <h2>Bienvenido</h2>
               <p>
                 The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a
                 demonstration of proper code use.
               </p>
+<br>
+
+              <h2>Device Connected</h2>
+
+              <ion-button color="secondary">LABEL</ion-button>
+
+              <h2>User Manual</h2>
+
+              <ion-button color="secondary"><ion-icon name="download-outline"></ion-icon></ion-button>
+  </div>
+            
 </ion-content>

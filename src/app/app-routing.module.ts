@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
+  {
+    path: 'wi',
+    loadChildren: () => import('./wi/wi.module').then( m => m.WiPageModule)
+  },
+  {
+    path: 'bluetooth',
+    loadChildren: () => import('./bluetooth/bluetooth.module').then( m => m.BluetoothPageModule)
+  },
   
 ];
 @NgModule({

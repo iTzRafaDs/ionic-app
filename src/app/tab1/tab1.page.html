@@ -1,24 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Conexiones Bluetooth / Wi-fi
-    </ion-title>
+    <ion-avatar slot="end">
+      <img src="/assets/logo.jpeg" alt="">
+    </ion-avatar>
+    <ion-title text="start">Conexiones Bluetooth - WiFi</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-icon size="large" name="bluetooth-outline"></ion-icon>
-  <p>Bluetooth</p>
-  <ion-toggle ></ion-toggle>
-  <p></p>
-  <ion-icon size="large" name="wifi-outline"></ion-icon>
-  <p>Bluetooth</p>
-  <ion-toggle></ion-toggle>
-  
+<ion-content>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label>
+          Elija su conexion
+        </ion-label>
+      </ion-list-header>
+    <ion-item *ngFor="let c of componentes"
+      [routerLink]="c.redirecTo" detail>
+      <ion-icon slot="start" [name]="c.icon"></ion-icon>
+      <ion-label>{{ c.name }}</ion-label>
+    </ion-item>
+    </ion-radio-group>
+  </ion-list>
 </ion-content>

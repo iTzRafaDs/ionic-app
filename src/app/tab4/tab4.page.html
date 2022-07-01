@@ -1,16 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Configuracion
-    </ion-title>
+    <ion-avatar slot="end">
+      <img src="/assets/logo.jpeg" alt="">
+    </ion-avatar>
+    <ion-title text="start">Configuracion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <ion-item>
+    {{ 'TSETTINGS' | translate }}
+    <ion-label>Language</ion-label>
+    <ion-select ok-text="Cambiar" cancel-text="Cancelar">
+      <ion-select-option value="en">Ingles</ion-select-option>
+      <ion-select-option value="es">Español</ion-select-option>
+    </ion-select>
+  </ion-item>
 
+
+  <div class="centrar">
+    <br>
+    <ion-button color="secondary">Iniciar Sesion</ion-button>
+    <br>
+    <br>
+    <ion-button color="secondary">Cerrar Sesion</ion-button>
+  </div>
 </ion-content>
